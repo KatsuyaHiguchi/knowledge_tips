@@ -9,115 +9,36 @@
         <script src="@routes.Assets.versioned("javascripts/hello.js")" type="text/javascript"></script>
     </head>
     <body>
-    	<section>
-    		<h1>やりたいこと</h1>
-    		<p>タイトル・本文・タグで構成された箱をちりばめたい。</p>
-    		<p>箱と箱を線でつなぎたい。</p>
-    		<p>線は任意に付け替えしたい。</p>
-    		<p>箱はドラッグドロップで移動したい。</p>
-    		<p>箱を移動したら線もくっついてきてほしい。</p>
-    	</section>
-    	<section>
-    		<h1>実装方法案</h1>
-    		<ul>
-    			<li style="text-decoration:line-through;">通常DOMで実装：線てどうする・・・？</li>
-    			<li style="text-decoration:line-through;">canvas+jsで！：一旦こっちでかんがえてみる。処理負荷とかどうなんだろう。</li>
-    			<li style="text-decoration:line-through;">他にやり方があるかも？</li>
-    			<li>svgがよさそうなので、以下でチュートリアル的練習を行う</li>
-    			<li>jsフレームワークはReactやってみようか</li>
-    		</ul>
-    	</section>
-    	<section>
-    		<h1>気になること</h1>
-    		<ul>
-    			<li style="text-decoration:line-through;">canvasでドラッグドロップするなら、描画対象の重なりをどうするか考える必要がある</li>
-    			<li style="text-decoration:line-through;"><a href="https://www.html5rocks.com/ja/tutorials/canvas/performance/">パフォーマンスに関する資料</a></li>
-    			<li style="text-decoration:line-through;"><a href="https://teratail.com/questions/182624">canvas内のドラッグドロップに関する資料</a></li>
-    		</ul>
-    	</section>
-    	<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
-    		<text x="100" y="75">Hello World</text>
-    		<circle cx="150" cy="200" r="100" fill="#06f"></circle>
-    		<line x1="0" y1="0" x2="150" y2="150" stroke="black" stroke-width="1" />
-    		<rect x="10" y="10" width="100" height="50" stroke="black" stroke-width="1" fill="none" />
-    		<rect x="50" y="50" width="100" height="50" stroke="black" stroke-width="1" fill="red" />
-    		<ellipse cx="150" cy="75" rx="30" ry="20" stroke="black" stroke-width="1" fill="none" />
-    	</svg>
-
-    	<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
-			<g stroke="black" fill="white" fill-opacity="0.5" stroke-width="1">
-	    		<rect x="10" y="10" width="200" height="100" stroke="black" stroke-width="1" fill="none" />
-	    		<rect x="10" y="10" width="200" height="30" stroke="black" stroke-width="1" fill="none" />
-	    		<text x="10" y="30">Hello World</text>
-			</g>
-    	</svg>
-
-    	<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
-    	 <textArea font-size="70" fill="purple" x="10" y="10"
-			  width="400" height="400">
-			 iPOPWeb®（アイポップウェブ）は、<tBreak/>
-			 プライスカード・ＰＯＰ作成だけでなく、年賀状、名刺、表彰状、熨斗、
-			 季節のポスターなど様々な用途でご利用いただいてます。<tBreak/><tBreak/>
-			 ・クラウドだから導入ラクラク<tBreak/>
-			 ・ブラウザだから利用ラクラク<tBreak/>
-			 ・5,000種類以上のテンプレート<tBreak/>
-			 ・印刷はもちろんPXDOC</textArea>
-    	</svg>
-
-   		<header>
+    	<header>
     		<h1>フレックスボックスのテスト</h1>
     		<a href="https://developer.mozilla.org/ja/docs/Learn/CSS/CSS_layout/Flexbox">参考サイト</a>
    		</header>
-    	<section style="display:flex;">
-    		<article style="padding: 10px; margin: 10px; background:aqua;">
-    			<h2>article 1</h2>
-    			<p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
-    		</article>
-    		<article style="padding: 10px; margin: 10px; background:aqua;">
-    			<h2>article 2</h2>
-    			<p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
-    		</article>
-    		<article style="padding: 10px; margin: 10px; background:aqua;">
-    			<h2>article 3</h2>
-    			<p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
-    		</article>
-    	</section>
 
     	<div style="display:flex;">
-    		<section style="flex: 1; background:aqua; margin: 10px; padding:10px;">
-    			<article>
+    		<section style="flex: 1; margin:10px;">
+
+    			<div style="padding:10px; margin:5px;" class="panel">
+    				<button class="button" style="padding:10px;">new-tips</button>
+    			</div>
+    			<article  style="padding:10px; margin:5px;" class="panel">
 	    			<h1>詳細表示</h1>
 	    			<p>マップ内で選択したtipの詳細内容を表示</p>
     			</article>
-    			<div>
-    				<h2>Hello world</h2>
-    				<p>Hello Worldとは、画面に「Hello, World!」と出力するだけの機能を持つ、簡単なプログラムである。<br>
-    				<br>
-					多くのプログラミング言語入門書がこのプログラムを最初の例として挙げているため、多くの初心者がこのプログラムを最初に書くことになる。<br>
-					<br>
-					「Hello, World!」を直訳すると、「こんにちは、世界！」となる。「こんにちはこんにちは！！」と訳す人もいる。<br>
-					<br>
-					Hello Worldは、ブライアン・カーニハンとデニス・リッチーによるC言語解説書「プログラミング言語C」（通称K&R）に由来すると言われている。出力する文言は別に何でも良いのだが、K&Rの伝統に則り、「Hello, World!」と出力する例が多いようだ（ただし、K&Rでは「hello, world」と全て小文字で感嘆符が無いものを出力している）。</p>
+    			<div  style="padding:10px; margin:5px;" class="panel">
+    				<h2 id="title">Hello world</h2>
+    				<div id="note">
+	    				<p>Hello Worldとは、画面に「Hello, World!」と出力するだけの機能を持つ、簡単なプログラムである。<br>
+	    				<br>
+						多くのプログラミング言語入門書がこのプログラムを最初の例として挙げているため、多くの初心者がこのプログラムを最初に書くことになる。<br>
+						<br>
+						「Hello, World!」を直訳すると、「こんにちは、世界！」となる。「こんにちはこんにちは！！」と訳す人もいる。<br>
+						<br>
+						Hello Worldは、ブライアン・カーニハンとデニス・リッチーによるC言語解説書「プログラミング言語C」（通称K&R）に由来すると言われている。出力する文言は別に何でも良いのだが、K&Rの伝統に則り、「Hello, World!」と出力する例が多いようだ（ただし、K&Rでは「hello, world」と全て小文字で感嘆符が無いものを出力している）。</p>
+    				</div>
     			</div>
     		</section>
-    		<section style="flex: 3; background:aqua; margin: 10px; padding:10px;">
-    			<h1>マップ</h1>
-    			<p>tipとtip同士の関連を描画</p>
-
-		    	<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
-
-					<g id="1" stroke="black" fill="white" fill-opacity="0.5" stroke-width="1">
-			    		<rect x="10" y="10" width="200" height="30" stroke="black" stroke-width="1" fill="none" />
-			    		<text x="20" y="30">Hello World</text>
-					</g>
-
-    				<line id="line_1" x1="10" y1="10" x2="100" y2="200" stroke="black" stroke-width="1" one="1" other="2" />
-
-					<g id="2" stroke="black" fill="white" fill-opacity="0.5" stroke-width="1">
-			    		<rect x="100" y="200" width="200" height="30" stroke="black" stroke-width="1" fill="none" />
-			    		<text x="110" y="220">プログラミング</text>
-					</g>
-		    	</svg>
+    		<section style="flex: 3; margin: 10px; padding:10px; display:flex; min-height:2000px;" class="panel">
+    			<iframe id="wb_svg_frame" style="width:100%;" src="/svg"></iframe>
     		</section>
     	</div>
     </body>

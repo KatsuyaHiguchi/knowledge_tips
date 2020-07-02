@@ -24,4 +24,8 @@ public class HomeController extends Controller {
         return ok(whiteboard.render());
     }
 
+    public Result wb_svg() {
+        return ok(svg.render());
+    }
+
 }
